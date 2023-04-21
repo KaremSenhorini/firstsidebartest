@@ -1,0 +1,113 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Sans-serif;
+    background-color: #6a6d6c;
+    color: #DCE4E3;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 1px solid #6a6d6c;
+    transition: all 0.35s;
+    background: #000;
+}
+
+.sidebar-header{
+width: 100%;
+margin-bottom: 1px;
+}
+
+.logo-img{
+
+    width: 160px;
+    min-height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-left: 3px;
+    
+}
+
+.logo-img:hover{
+    transform: scale(1.5);
+}
+
+.sidebar button {
+height: 60px;
+background: transparent;
+border: 0;
+font-family: inherit;
+color: inherit;
+cursor: pointer;
+text-align: left;
+padding: 0;
+}
+
+.sidebar button > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+}
+
+.sidebar button:hover > span { 
+    background: rgb(29,26,23);
+    background: linear-gradient(90deg, rgba(29,26,23,1) 0%, rgba(106,88,95,1) 100%);
+}
+
+.sidebar button i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button span {
+    font-size: 16px;
+
+}
+
+.sidebar > nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.main {
+    margin-left: 250px;
+    margin-right: 6px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+@media( width < 920px) {
+.sidebar{
+    width 72px;
+}
+.sidebar bottom > span {
+width: 50px;
+}
+.sidebar button > span > span{
+    opacity: 0;
+    visibility: hidden;
+};
+}
